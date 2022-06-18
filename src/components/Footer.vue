@@ -36,9 +36,9 @@
                 </div> 
                 <form class="relative">
                     <div class="ml-1 ">
-                        <input v-model="email" placeholder="Email Address" class="font-serif font-normal text-sm text-black pl-4 flex justify-start  w-10/12 12 sm:w-7/12 md:w-11/12 lg:w-10/12 xl:w-9/12 h-10 lg:h-10 rounded-lg bg-white border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
+                        <input v-model="email" placeholder="Email Address" class="font-serif font-normal text-sm text-black pl-4 flex justify-start  w-full sm:w-6/12 md:w-11/12 lg:w-full h-10 lg:h-10 rounded-lg bg-white border border-slate-300 border-solid mb-2 focus:outline-none" type="name"/>
                     </div>
-                    <Arrow class="absolute right-11 sm:right-56 md:right-2 lg:right-11 xl:right-20 top-0"/>
+                    <Arrow class="absolute right-0 sm:right-72 md:right-7 md:h-10 lg:right-0 xl:right-22 top-0"/>
                 </form>
             </div>     
         </div>

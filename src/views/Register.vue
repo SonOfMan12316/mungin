@@ -13,25 +13,25 @@
                     <label class=" font-medium font-serif text-base text-black">Username</label>
                 </div>
                 <div>
-                    <input v-model="userName" class="pr-1 my-3 pl-4 font-serif font-normal text-base text-black flex justify-start w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-white border  border-solid mb-2 focus:outline-none required" type="name"/>
+                    <input v-model="userName" class="pr-1 my-3 pl-4 font-serif font-normal text-base text-black flex justify-start w-full  md:w-11/12 lg:w-full h-10  md:h-14 rounded-lg bg-white border  border-solid mb-2 focus:outline-none required" type="name"/>
                 </div>
                 <div class="w-3/12 mr-2 font-serif flex justify-start ">
                     <label class=" font-medium text-base text-black">Phonenumber</label>
                 </div>
                 <div>
-                    <input v-model="phoneNumber" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4  flex justify-start  w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full  h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="tel"/>
+                    <input v-model="phoneNumber" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4  flex justify-start  w-full md:w-11/12 lg:w-full  h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="tel"/>
                 </div>
                 <div class="w-3/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Occupation</label>
                 </div>
                 <div>
-                    <input v-model="occupation" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full sm:w-10/12 md:w-11/12 lg:w-10/12  xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="text"/>
+                    <input v-model="occupation" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full md:w-11/12 lg:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="text"/>
                 </div>
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Email</label>
                 </div>
                 <div>
-                    <input v-model="email" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full 12 sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name"/>
+                    <input v-model="email" class="pr-1 my-3 font-serif font-normal text-base text-black pl-4 flex justify-start  w-full md:w-11/12 lg:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name"/>
                 </div>
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start ">Region</label>
@@ -40,15 +40,15 @@
                     <input 
                         v-model="selectedItem.region"  
                         :disabled="validated ? disabled : ''"
-                        class="pr-1 my-3 font-serif font-normal text-sm lg:text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name"/>
+                        class="pr-1 my-3 font-serif font-normal text-sm lg:text-base text-black pl-4 flex justify-start w-full md:w-11/12 lg:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name"/>
                     <ChevronDownIcon 
                         @click="isVisible = !isVisible"
                         :class=" isVisible ? 'dropdown-icon' : ' dropup-icon'" 
-                        class="cursor-pointer absolute w-5 h-5 ml-2 top-6 right-3 sm:right-24 md:right-20 lg:right-40 md:top-9 xl:right-9 xl:top-8"/>
+                        class="cursor-pointer absolute w-5 h-5 ml-2 top-6 right-3 sm:right-4 md:right-16 lg:right-4 md:top-8 xl:right-8 xl:top-8"/>
                     <div 
                         :style="{ backgroundImage: `url(${dropdownBg})` }"
                         :class="isVisible ? 'visible' : 'invisible'" 
-                        class="options absolute bg-transparent -right-4 top-8 sm:right-0 md:-right-8 lg:right-3 xl:-right-28 md:top-11 xl:top-10  sm:w-56 lg:w-72 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                        class="options absolute z-50 -right-4 top-8 sm:right-0 md:-right-8 lg:right-3 xl:-right-28 md:top-11 xl:top-10  sm:w-56 lg:w-72 mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <ul class="py-8 sm:py-12 px-2.5 lg:px-4 xl:px-6 xl:py-12 md:py-11">
                             <li 
                             v-for="(user, index) in userArray"
@@ -65,19 +65,19 @@
                     <label class=" font-medium text-base text-black flex justify-start ">State</label>
                 </div>
                 <div>
-                    <input v-model="state" class="pr-1 my-3  border-none font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 mb-2 focus:outline-none required" type="text"/>
+                    <input v-model="state" class="pr-1 my-3  border-none font-serif font-normal text-base text-black pl-4 flex justify-start w-full   md:w-11/12 lg:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 mb-2 focus:outline-none required" type="text"/>
                 </div>
                 <div class="w-8/12 font-serif">
                     <label class=" font-medium text-base text-black flex justify-start">Password</label>
                 </div>
                 <div>
-                    <input v-model="password" class="pr-1 my-3 border-none font-serif font-normal text-base text-black pl-4 flex justify-start w-full  sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 mb-2 focus:outline-none required" type="password"/>
+                    <input v-model="password" class="pr-1 my-3 border-none font-serif font-normal text-base text-black pl-4 flex justify-start w-full   md:w-11/12 lg:w-full h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 mb-2 focus:outline-none required" type="password"/>
                 </div>
-                <div class="w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-8/12 flex justify-start mb-8">
+                <div class="w-full sm:w-10/12 md:w-11/12 lg:w-10/12 xl:w-9/12 flex justify-start mb-8">
                     <h1 class=" font-medium font-serif text-sm text-black">At least 8 characters (and up to 100 characters),5 or more unique characters and must contain at least 3 of the following: uppercase,lowercase,numeric, or special characters. The allowed special characters are ~ ! @ # $ % ^ * - _ = + : , . ?  [no spaces allowed</h1>
                 </div>
                 <div class="flex relative mb-4">
-                    <button style="background-color: #17233C;" class="font-medium w-full 12  sm:w-10/12 md:w-11/12 h-10 md:h-14 lg:w-10/12 xl:w-full rounded-xl text-white font-serif mt-2">Submit</button>
+                    <button style="background-color: #17233C;" class="font-medium w-full  md:w-11/12 h-10 md:h-14 lg:w-full rounded-xl text-white font-serif mt-2">Submit</button>
                 </div>
             </form>
         </div>
@@ -204,7 +204,7 @@ input {
         .dropup-icon,
         .dropdown-icon {
             position: absolute;
-            right: 11rem
+            right: 1rem
         }
 
         .options {

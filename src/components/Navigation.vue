@@ -8,7 +8,7 @@
                         <img class="image md:w-32 lg:w-36" src="../assets/images/MUNGINLogo.png"/>
                     </div>
                 </router-link>
-                <div class="nav-links w-7/12 hidden xl:block" v-show="!mobile"> 
+                <div class="nav-links w-7/12 hidden lg:block" v-show="!mobile"> 
                 <ul class="flex items-center">
                     <li class=" font-serif font-bold text-base mx-6 relative"><router-link to="/">Home</router-link><Seed class="absolute left-2"/></li>
                     <li @click="scrollToProcess" @mouseover="secHover = true" @mouseleave="secHover = false" class=" font-serif  font-bold text-base mx-6 relative">Process<Seed v-if="secHover"  class="absolute left-5"/></li>
@@ -43,7 +43,7 @@
                 <img @click="toggleMobileNav" v-show="mobile" :class="{ 'icon-active': mobileNav}" class=" img w-8"   src="https://img.icons8.com/material/50/000000/menu--v1.png"/>
             </div>
             <transition name="mobile-nav">
-            <ul v-show="mobileNav" class="dropdown-nav absolute w-1/2 h-screen top-0 right-0  py-4 flex flex-col gap-y-4">  
+            <ul v-show="mobileNav" class="dropdown-nav z-50 absolute w-1/2 h-screen top-0 right-0  py-4 flex flex-col gap-y-4">  
                 <div class="ml-2 md:mt-1 lg:mt-3">
                 <CancelSvg @click="toggleIsSelected" :class="{ 'selected' : isSelected }"/>
                 </div>    
@@ -117,7 +117,7 @@ export default {
         },
         checkScreen() {
             this.windowWidth = window.innerWidth
-            if (this.windowWidth <= 1280) {
+            if (this.windowWidth <= 1200) {
                 this.mobile = true;
                 return; 
             }

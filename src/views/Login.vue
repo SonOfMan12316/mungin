@@ -7,13 +7,13 @@
                     <label class=" font-medium font-serif text-base text-black">Username/Email</label>
                 </div>
                 <div class="">
-                    <input v-model="userName" class="pl-4 pr-3 sm:pr-2 lg:pr-3 xl:pr-5 font-serif font-normal text-sm text-black flex justify-start w-10/12 sm:w-8/12 lg:w-7/12 xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name/email"/>
+                    <input v-model="userName" class="pl-4 pr-3 sm:pr-2 lg:pr-3 xl:pr-5 font-serif font-normal text-sm text-black flex justify-start w-full sm:w-8/12 lg:w-7/12 xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required" type="name/email"/>
                 </div>
                 <div class="w-3/12 font-serif flex justify-start mb-4">
                     <label class=" font-medium text-base text-black">Password</label>
                 </div>
                 <div class="mb-4  relative">
-                    <input :type="visibility" v-model="password" class="font-serif font-normal text-sm text-black pl-4 pr-10 sm:pr-8 md:pr-10 lg:pr-16 xl:pr-11 flex justify-start w-10/12 12 sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required"/>
+                    <input :type="visibility" v-model="password" class="font-serif font-normal text-sm text-black pl-4 pr-10 sm:pr-8 md:pr-10 lg:pr-16 xl:pr-11 flex justify-start w-full sm:w-8/12 lg:w-7/12  xl:w-5/12 h-10  md:h-14 rounded-lg bg-transparent border border-slate-300 border-solid mb-2 focus:outline-none required"/>
                     <span class="flex justify-start items-center w-1/3">
                         <!-- <EyeVisibleNo class="no absolute right-16 sm:right-52 md:right-60 lg:right-96 xl:right-2/4 lg:top-5 md:top-4 top-2.5" @click="showPassword"/> -->
                         <EyeVisibleNo class="no" @click="showPassword"/>
@@ -28,7 +28,7 @@
                     </router-link>    
                 </div>     
                 <!-- <div class=""> -->
-                    <button style="background-color: #17233C;" class="font-medium w-10/12 12 sm:w-8/12 h-10 md:h-14 lg:w-7/12  xl:w-5/12 rounded-xl text-white font-serif mt-2">Login</button>        
+                    <button style="background-color: #17233C;" class="font-medium w-full sm:w-8/12 h-10 md:h-14 lg:w-7/12  xl:w-5/12 rounded-xl text-white font-serif mt-2">Login</button>        
                 <!-- </div> -->
                 <div class="flex justify-start mt-2 xl:-">
                     <h2 class="font-serif font-normal text-base lg:text-lg">
@@ -88,14 +88,14 @@ input {
 }
 .no {
         position: absolute;
-        right: 20%;
+        right: 5%;
         top: 0.65rem;
     }  
     
     @media (min-width: 640px)  {
     .no {
         position: absolute;
-        right: 34.5%;
+        right: 36%;
         top: 0.6rem;
     }    
     } 
@@ -113,7 +113,7 @@ input {
         top: 1.2rem;
     }    
     } 
-    @media (min-width: 1300px)  {
+    @media (min-width: 1280px)  {
         .no {
             position: absolute;
             right: 60%;

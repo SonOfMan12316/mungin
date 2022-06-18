@@ -4,7 +4,7 @@
             <router-link to="/read-more">
                 <img :src="image" class="w-full sm:w-full"/>
             </router-link>
-            <div class="article-content-bottom px-3 py-2 w-11/12">
+            <div class="article-content-bottom px-3 py-2 w-full">
                 <p class="text-left text-xs md:text-sm font-normal md:font-medium font-serif mb-1 w-10/12 sm:w-8/12 md:w-8/12 lg:w-full xl:w-full" :style="{color: `${paragraphColor}`}">{{ date }}</p>
                 <h3 class="font-serif text-sm md:text-base lg:text-lg  font-semibold md:font-bold mb-4">{{ header }}</h3>
                 <p class="ml-0.5 text-left text-xs md:text-sm font-normal md:font-medium font-serif w-full lg:w-full xl:w-11/12" :style="{color: `${paragraphSecColor}`}">{{ description }}</p>
