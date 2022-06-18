@@ -107,7 +107,7 @@ export default {
         top: 2.125rem;
     }    
     } 
-    @media (min-width: 1300px)  {
+    @media (min-width: 1280px)  {
         .no {
             position: absolute;
             right: 60%;
